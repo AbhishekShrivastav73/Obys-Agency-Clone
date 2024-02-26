@@ -1,0 +1,239 @@
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+color: white;
+
+}
+
+/* Global Styles */
+body,html {
+  font-family: 'Arial', sans-serif;
+  height : 100%;
+  width: 100%;
+  background: black;
+}
+
+/* Add your own styles below this line */
+
+/* Crsr  */
+#crsr{
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+/* Loader  */
+#loader{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0;
+    padding: 7vw 6vw;
+}
+.loaderContent{
+    width: fit-content;
+    margin: 0.5vw;
+    overflow: hidden;
+    display: flex;
+    /* align-items: center; */
+    gap: 2.8vw;
+}
+.timer{
+    display: flex;
+    height: 100%;
+    font-family: 'silk serif';
+    width: 20vw;
+    justify-content: flex-end;
+    align-items: start;
+}
+.timer h2{
+    font-size: 4vw;
+    font-weight: 400;
+}
+.loaderContent h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-family:  "plain light";
+    font-weight: 600;
+}
+.blink{
+    font-size: 4vw;
+    width: 16vw;
+    display: flex;
+    align-items: center;
+    height: 14vh;
+}
+.blink h2{
+    font-weight: 400;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: whitesmoke;
+}
+@keyframes blinker {
+   0%{
+    opacity: 1;
+    color: white;
+   }40%{
+    opacity: 0;
+   }60%{
+    opacity: 1;
+    font-family: 'silk serif';
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+   }80%{
+    opacity: 0;
+   }100%{
+    opacity: 1;
+   }
+}
+.waiting{
+    overflow: hidden;
+}
+.waiting h3{
+    font-size: 1.1vw;
+    font-weight: 100;
+}
+
+
+
+/* HeroContainer */
+.heroContainer{
+    width: 100%;
+    height: 100vh;
+    background: #151515;
+
+}
+.heroContainer nav{
+    /* background: #151515; */
+    display: flex;
+    /* align-items: center; */
+    padding: 4.18vw 5.18vw;
+    /* background: red; */
+    justify-content: space-between;
+}
+.svgs{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    height: fit-content;
+}
+.logos{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+.logos p{
+    line-height: 1.2vw;
+}
+.menus{
+    display: flex;
+    gap: 2.8vw;
+}
+.menus a{
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    font-family: 'plain light';
+}
+.heroContent{
+    /* background: red; */
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+    height: fit-content;
+    width: 73%;
+    margin-left: 27%;
+    font-family: 'plain light';
+    overflow: hidden;
+    z-index: 999;
+}
+.heroContent h2{
+    font-size: 7.5vw;
+    /* background-color: red; */
+    text-align: center;
+    font-weight: 500;
+    font-family: 'plain regular';
+    line-height: 7.5vw;
+}
+
+
+.mainContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 3.1vw;
+    flex-direction: column;
+    position: relative;
+}
+/* .mainContainer .heroContent:nth-child(3) h2{
+    text-decoration: underline;
+} */
+
+.mainContainer::before{
+    content:'01';
+    position: absolute;
+    top: 0%;
+    left: 21%;
+    font-family: 'silk serif';
+    font-size: 3.2vw;
+
+}
+.heroContent h2 u:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 400;
+}
+.heroContent h2 u{
+    transition: all ease .3s;
+}
+
+
+/* Video Section  */
+section{
+    width: 100%;
+    height: 100vh;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.videoContainer{
+    width: 74vw;
+    height: 80vh;
+    position: relative;
+}
+.videoContainer video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.videoContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#videoCursor{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    background: #FFA63D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10%;
+    right : 20%;
+}
+#videoCursor i{
+    font-size: 3.5vw;
+}
