@@ -16,7 +16,9 @@ body,html {
 }
 
 /* Add your own styles below this line */
-
+#wrapper{
+    position: relative;
+}
 /* Crsr  */
 #crsr{
     height: 3vw;
