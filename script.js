@@ -103,6 +103,7 @@ tl.to('#loader',{
 })
 tl.from('nav',{
     opacity : 0,
+    y:-100
 })
 tl.from('.heroContent h2, .mainContainer::before',{
     y:150,
@@ -112,7 +113,7 @@ tl.from('.heroContent h2, .mainContainer::before',{
 })
 }
 
-loadingAnimation()
+// loadingAnimation()
 
 function crsr(){
     let wrapper = document.querySelector('#wrapper')

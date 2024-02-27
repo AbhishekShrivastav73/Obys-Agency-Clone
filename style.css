@@ -14,10 +14,10 @@ body,html {
   width: 100%;
   background: black;
 }
-
 /* Add your own styles below this line */
 #wrapper{
     position: relative;
+    background: #151515;
 }
 /* Crsr  */
 #crsr{
@@ -99,6 +99,8 @@ body,html {
 }
 .waiting{
     overflow: hidden;
+    margin-left: 30%;
+    margin-top: 3vw;
 }
 .waiting h3{
     font-size: 1.1vw;
@@ -199,7 +201,7 @@ body,html {
 
 
 /* Video Section  */
-section{
+#videoSection{
     width: 100%;
     height: 100vh;
     background: #151515;
@@ -238,4 +240,172 @@ section{
 }
 #videoCursor i{
     font-size: 3.5vw;
+}
+
+/* projects section */
+#projects{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* About Section  */
+#about{
+    align-items: start;
+    min-height: 228vh;
+    background: #151515;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+}
+#aboutContent::before{
+    content : '03';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    font-family: 'silk serif';
+    font-size: 3.3vw;
+
+}
+#aboutContent{
+    width:66vw;
+    min-height: 70vh;
+    margin-right: 8vw;
+    /* background: yellow; */
+    position: relative;
+}
+#aboutContent h3{
+    font-size: 7.5vw;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+
+}
+.underline{
+    width: 100%;
+    /* height: vh; */
+    border: 1px solid white;
+    margin: 2vw 0;
+}
+#aboutContent .mainText{
+    font-size: 2.5vw;
+    width: 50%;
+    margin-top: 5vw;
+}
+.imgSections{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    margin-top: 3vw;
+}
+.imgSections img{
+    width:100%;
+    height: 80vh;
+    object-fit: cover;
+}
+.texts p{
+    width: 65%;
+    font-size: 1.2vw;
+    margin: 0 0 2vw 0;
+}
+.table{
+    width: 60%;
+    height: 80vh;
+    background: #3F7DF4;
+    padding: 2.3vw; 
+    position: absolute;
+    right: 0;
+    bottom : -25%
+}
+.table .rows{
+    width: 100%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.rows h4{
+    font-size: 2vw;
+    font-weight: 500;
+}
+.rows p{
+    font-size: 1.1vw;
+    width: 50%;
+    /* text-align: end; */
+}
+
+.worksWith{
+    min-height: fit-content;
+    width: 100%;
+    background: #151515;
+    display: flex;
+    align-items: end;   
+    flex-direction: column;
+
+
+}
+.workContent{
+    width: 74vw
+}
+.workContent h6{
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+.animation{
+    width: 100%;
+    margin-top: 4vw;
+}
+.elem{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+
+}
+.elem h1{
+    font-size: 7vw;
+    font-family: 'plain light';
+    animation-name: animation;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-right: 16px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 300;
+}
+@keyframes animation {
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+
+}
+.elem2 h1{
+    font-size: 7vw;
+    font-family: 'plain light';
+    animation-name: animation;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-right: 16px;
+    animation-direction: reverse;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 300;
+}
+.elem h1 span, .elem2 h1 span{
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 300;
 }
