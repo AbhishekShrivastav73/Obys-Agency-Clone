@@ -46,8 +46,6 @@ gsapScrollTrigger()
 
 function loadingAnimation(){
 
-
-
 let tl = gsap.timeline();
 tl.from('.loaderContent h1',{
     y : 150,
@@ -113,7 +111,7 @@ tl.from('.heroContent h2, .mainContainer::before',{
 })
 }
 
-// loadingAnimation()
+loadingAnimation()
 
 function crsr(){
     let wrapper = document.querySelector('#wrapper')
