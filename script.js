@@ -80,30 +80,32 @@ tl.from('.waiting h3',{
 })
 tl.to('.blink h2',{
     opacity : 0,
-    duaration : 3,
+    duaration : 2,
     animationName: 'blinker',
     duaration : 0.2
 })
 
-tl.to('#loader .loaderContent h1, .timer h2, .waiting h3',{
+tl.to('#loader .loaderContent h1, .timer h2, .waiting h3,.blink',{
     opacity : 0,
     delay : 1.2,
     duration : 0.1,
-    stagger : 0.1
-})
-tl.from('.heroContainer',{
-    y: 1200,
-    duration : 0.8
-
+    stagger : 0.1,
+    // y:-1200
 })
 tl.to('#loader',{
     display :'none'
 })
+tl.from('.heroContainer',{
+    y: 1200,
+    duration : 1
+
+})
+
 tl.from('nav',{
     opacity : 0,
     y:-100
 })
-tl.from('.heroContent h2, .mainContainer::before',{
+tl.from('.heroContent h2, .heroContent',{
     y:150,
     opacity : 0,
     // duaration : 0.1,
@@ -115,7 +117,7 @@ loadingAnimation()
 
 function crsr(){
     let wrapper = document.querySelector('#wrapper')
-    wrapper.addEventListener('mousemove',function(dets){
+    document.body.addEventListener('mousemove',function(dets){
         gsap.to('#crsr',{
             x:dets.x,
             y:dets.y
@@ -130,3 +132,9 @@ Shery.makeMagnet(".menus a" /* Element to target.*/, {
     duration: 1,
   });
 
+  Shery.imageEffect(".imgContainer", {
+    style: 6,
+    // debug: true,
+    gooey: true,
+    config:{"noiseDetail":{"value":7.44,"range":[0,100]},"distortionAmount":{"value":2.98,"range":[0,10]},"scale":{"value":36.36,"range":[0,100]},"speed":{"value":0.61,"range":[0,1]},"zindex":{"value":"99","range":[-9999999,9999999]},"aspect":{"value":0.9840426539534833},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.39,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":1.07,"range":[0,10]},"metaball":{"value":0.31,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.49,"range":[0,2]},"noise_scale":{"value":4.58,"range":[0,100]}}
+  });

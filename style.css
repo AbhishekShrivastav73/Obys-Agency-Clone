@@ -29,6 +29,7 @@ html {
   transform: translate(-50%, -50%);
   z-index: 999;
   mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 /* Loader  */
@@ -39,6 +40,7 @@ html {
   position: absolute;
   top: 0;
   padding: 7vw 6vw;
+  z-index: 1;
 }
 .loaderContent{
   width: fit-content;
@@ -118,11 +120,8 @@ html {
   background: #151515;
 }
 .heroContainer nav {
-  /* background: #151515; */
   display: flex;
-  /* align-items: center; */
   padding: 4.18vw 5.18vw;
-  /* background: red; */
   justify-content: space-between;
 }
 .svgs {
@@ -150,7 +149,6 @@ html {
   font-family: "plain light";
 }
 .heroContent {
-  /* background: red; */
   display: flex;
   align-items: flex-start;
   gap: 2vw;
@@ -163,7 +161,6 @@ html {
 }
 .heroContent h2 {
   font-size: 7.5vw;
-  /* background-color: red; */
   text-align: center;
   font-weight: 500;
   font-family: "plain regular";
@@ -173,13 +170,10 @@ html {
 .mainContainer {
   width: 100%;
   display: flex;
-  margin-top: 3.1vw;
+  margin-top: 2.5vw;
   flex-direction: column;
   position: relative;
 }
-/* .mainContainer .heroContent:nth-child(3) h2{
-    text-decoration: underline;
-} */
 
 .mainContainer::before {
   content: "01";
@@ -243,17 +237,150 @@ html {
 /* projects section */
 #projects {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  background: #151515;
+  background: #151515;
+  display: flex;
+  padding-top: 2vw;
+  align-items: end;
+  flex-direction: column;
 }
+.projectContent{
+  width: 66vw;
+  margin-right: 8vw;
+  position: relative;
 
+}
+.projectContent h2{
+  font-size: 7vw;
+  font-weight: 500;
+}
+.projectContainer{
+  width: 100%;
+  padding: 6vw 6vw 6vw 6vw;
+  /* columns: 3; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+
+}
+.parentImg{
+  width: 25vw; 
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: red; */
+}
+.parentImg h3{
+  font-size: 2.7vw;
+  font-weight: 400;
+}
+.imgCircle{
+  width: 20vw;
+  height: 43vh;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18vw;
+  position: relative ;
+
+}
+.imgCircle:hover .innerCircle{
+  scale: 1;
+}
+.innerCircle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: all ease 0.4s;
+}
+.innerCircle p {
+  color: black;
+  font-size: 1.1vw;
+}
+.imgContainer{
+  width: 25vw; 
+  /* width: 100%; */
+  height: 65vh;
+  background: red;
+  position: relative;
+  overflow: hidden; 
+  /* margin: 2vw; */
+  flex-shrink: 0;
+}
+.imgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+._canvas_container{
+  z-index: 9999 important;
+  pointer-events: none;
+}
+  .projectContainer .parentImg:nth-child(2n){
+    height: 90vh;
+    width: 30vw;
+  }
+#circle2{
+  margin-top: 0;
+}
+#circle2 svg{
+  rotate: -45deg;
+}
+#cicle3{
+  margin-top: 3vw;
+}
+#circle3 svg{
+  rotate: -90deg;
+}
+.projectContainer .parentImg:nth-child(2n) .imgContainer{
+  /* background: red; */
+  height: 80vh;
+  width: 30vw;
+}
+.imgCircle svg{
+  width: 5vw;
+}
+.allProjects{
+  width: 30vw;
+  height: 60vh;
+  background: #FFA63D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.allProjects h6{
+  font-weight: 400;
+}
+.allProjects h6 span{
+  font-family: 'silk serif';
+}
 /* About Section  */
 #about {
   align-items: start;
   min-height: 228vh;
   background: #151515;
   display: flex;
-  /* align-items: center; */
+  padding-top: 2vw;
   justify-content: flex-end;
+
 }
 #aboutContent::before {
   content: "03";
@@ -408,8 +535,8 @@ footer{
     height: fit-content;
     display: flex;
     justify-content: end;
-    margin-top: 3vw;
-    padding: 2vw;
+    padding: 4vw;
+    background: #151515;
 }
 
 .footerContainer{
